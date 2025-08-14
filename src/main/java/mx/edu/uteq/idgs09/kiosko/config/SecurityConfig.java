@@ -27,11 +27,11 @@ public class SecurityConfig {
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
             .authorizeRequests()
-            .antMatchers("/auth/**").permitAll()
-            .antMatchers("/admin/**").hasRole("ADMINISTRADOR")
-            .antMatchers("/profesor/**").hasRole("PROFESOR")
-            .antMatchers("/alumno/**").hasRole("ALUMNO")
-            .anyRequest().authenticated()
+                .antMatchers("/auth/**").permitAll()
+                .antMatchers("/admin/**").hasRole("ADMINISTRADOR")
+                .antMatchers("/profesor/**").hasRole("PROFESOR")
+                .antMatchers("/alumno/**").hasRole("ALUMNO")
+                .anyRequest().authenticated()
             .and()
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         

@@ -4,6 +4,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "usuario") // Explícitamente mapeado a la tabla "usuario"
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
