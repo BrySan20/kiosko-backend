@@ -8,7 +8,7 @@ RUN mvn clean package -DskipTests
 # Etapa de ejecución
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/kiosko-backend-1.0.0.jar app.jar
+COPY --from=build /app/target/kiosko-*.jar app.jar
 
 # Crear usuario no root por seguridad
 RUN useradd -m appuser && chown -R appuser:appuser /app
