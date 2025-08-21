@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173") // Origen del frontend
+                .allowedOrigins("https://kiosko-frontend-qzva.onrender.com") // Origen del frontend
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
                 .allowedHeaders("*") // Permitir todos los encabezados
                 .allowCredentials(true); // Permitir credenciales (si es necesario)
