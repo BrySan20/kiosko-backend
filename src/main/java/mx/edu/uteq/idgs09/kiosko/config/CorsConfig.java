@@ -13,7 +13,7 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins(
-                    "https://tu-frontend.onrender.com",
+                    "https://kiosko-frontend-qzva.onrender.com",
                     "http://localhost:3000",
                     "http://localhost:5173"
                 )
